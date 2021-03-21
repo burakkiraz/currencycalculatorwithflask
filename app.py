@@ -11,10 +11,10 @@ app = Flask(__name__)
 @app.route("/",methods = ["GET","POST"])
 def index():
     if request.method == "POST":
-        firstCurrency = request.form.get("firstCurrency") #USD
-        secondCurrency = request.form.get("secondCurrency") #TRY
+        firstCurrency = request.form.get("firstCurrency") 
+        secondCurrency = request.form.get("secondCurrency") 
 
-        amount = request.form.get("amount") #15
+        amount = request.form.get("amount") 
         response = requests.get(url)
         infos = response.json()
 
